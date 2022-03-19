@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="map-view">
+        <div className="map-element">
+          <iframe title="template map" width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=pieni-helvetti,%20kuopio&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <MapMenuElement/>
+      </div>
     </div>
+  );
+}
+
+//function ShowMenuSettings
+function MapMenuElement() {
+  const [showSettings, setShowSettings]=useState(true)
+  return (
+    <div className="map-menu-element">
+      <ul className="map-menu-nav">
+        <li className={showSettings?"selected":""}><button onClick={()=>setShowSettings(true)}>Settings</button></li>
+        <li className={showSettings?"":"selected"}><button onClick={()=>setShowSettings(false)}>Listing</button></li>
+      </ul>
+      <div className="map-menu-content">
+        {showSettings?<MapMenuSettings/>:<MapMenuListing/>}
+      </div>
+    </div>
+  );
+}
+
+function MapMenuSettings() {
+  return (
+    <h2>Settings</h2>
+  );
+}
+function MapMenuListing() {
+  return (
+    <h2>Listing</h2>
   );
 }
 

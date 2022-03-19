@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.map-view {
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.map-view div {
+  float:left;
+  display:inline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.map-view .map-element{
+  width: 70vw;
+  height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.map-view .map-menu-element{
+  width: 30vw;
+  height: 100%;
+  background-color: rgb(222, 222, 222);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.map-menu-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map-menu-nav li{
+  display: inline-block;
+  margin: 5px;
+  margin-bottom: 0;
+  background-color: none;
+}
+.map-menu-nav li.selected{
+  border-width: 2px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+  background-color: rgb(245, 245, 245);
+}
+.map-menu-nav li button{
+  background: none;
+  border: none;
+  padding: 10px;
+}
+.map-menu-content {
+  margin: 5px;
+  margin-top: 0;
+  padding: 5px;
+  background-color: rgb(245, 245, 245);
+  width: calc(100% - 20px);
+  flex-grow: 1;
 }
