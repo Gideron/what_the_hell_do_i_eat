@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="map-view">
         <div className="map-element">
-          <iframe title="template map" width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=pieni-helvetti,%20kuopio&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          <iframe title="template map" width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=pieni-helvetti,%20kuopio&t=&z=15&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
         </div>
         <MapMenuElement/>
       </div>

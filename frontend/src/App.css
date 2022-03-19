@@ -1,6 +1,8 @@
 .map-view {
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 10px);
+  height: calc(100vh - 10px);
+  padding: 5px;
+  background-color: rgb(222, 222, 222);
 }
 
 .map-view div {
@@ -8,11 +10,11 @@
   display:inline;
 }
 .map-view .map-element{
-  width: 70vw;
+  width: 70%;
   height: 100%;
 }
 .map-view .map-menu-element{
-  width: 30vw;
+  width: 30%;
   height: 100%;
   background-color: rgb(222, 222, 222);
   display: flex;
